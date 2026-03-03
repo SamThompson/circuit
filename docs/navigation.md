@@ -6,7 +6,7 @@ For navigable contents, navigation becomes two parts:
 1. A `NavStack`, where we use a `SaveableNavStack` implementation that saves a stack of `Screen`s and the `ProvidedValues` for each record on that stack (allowing us to save and restore on configuration changes automatically).
 2. A `Navigator`, which is a simple interface that we can point at a `NavStack` and offers simple `goTo(<screen>)`/`pop()` semantics. These are offered to presenters to perform navigation as needed to other screens.
 
-A new navigable content surface is handled via the `NavigableCircuitContent` functions. If you want to have custom behavior for when back is pressed on the root screen (i.e. `navStack.isAtRoot`), perform this the lambda passed to `rememberCircuitNavigator`'s `onRootPop`.
+A new navigable content surface is handled via the `NavigableCircuitContent` functions. If you want to have custom behavior for when back is pressed on the root screen (i.e. `navStack.isAtRoot`), perform this in the lambda passed to `rememberCircuitNavigator`'s `onRootPop`.
 
 ```kotlin
 setContent {
